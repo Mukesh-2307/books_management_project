@@ -1,0 +1,27 @@
+{
+    "name": "books_management_project",
+    "version": "1.0.0",
+    "description": "lms",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js",
+      "dev": "nodemon index.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Mukesh-2307/books_management_project"
+    },
+    "author": "Mukesh Kumar Dalai",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/Mukesh-2307/books_management_project/issues"
+    },
+    "homepage": "https://github.com/Mukesh-2307/books_management_project#readme",
+    "devDependencies": {
+      "nodemon": "^3.1.4"
+    },
+    "dependencies": {
+      "express": "^4.19.2"
+    }
+  }
+  
