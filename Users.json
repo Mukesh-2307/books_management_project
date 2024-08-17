@@ -1,0 +1,20 @@
+{
+    "users": [
+      {
+        "id": "1",
+        "name": "mukesh",
+        "roll": "20btcse42"
+      },
+      {
+        "id": "2",
+        "name": "manas",
+        "roll": "20btcse38"
+      },
+      {
+        "id": "3",
+        "name": "ashis",
+        "roll": "20btcse18"
+      }
+    ]
+  }
+  

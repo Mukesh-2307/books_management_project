@@ -1,0 +1,20 @@
+{
+    "books": [
+      {
+        "id": "111",
+        "name": "the hidden hindu",
+        "genre": "historical"
+      },
+      {
+        "id": "112",
+        "name": "the atomic habit",
+        "genre": "life"
+      },
+      {
+        "id": "113",
+        "name": "the psychology of money",
+        "genre": "finance"
+      }
+    ]
+  }
+  
