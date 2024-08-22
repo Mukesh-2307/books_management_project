@@ -3,17 +3,26 @@
       {
         "id": "1",
         "name": "mukesh",
-        "roll": "20btcse42"
+        "roll": "20btcse42",
+        "email": "mukeshdalai.2307@gmail.com",
+        "subscription-type": "premium",
+        "subscription-date": "23-07-2024"
       },
       {
         "id": "2",
         "name": "manas",
-        "roll": "20btcse38"
+        "roll": "20btcse38",
+        "email": "manaskumar.2307@gmail.com",
+        "subscription-type": "standard",
+        "subscription-date": "06-09-2024"
       },
       {
         "id": "3",
         "name": "ashis",
-        "roll": "20btcse18"
+        "roll": "20btcse18",
+        "email": "ashisdas.2307@gmail.com",
+        "subscription-type": "basic",
+        "subscription-date": "29-09-2024"
       }
     ]
   }
