@@ -15,13 +15,13 @@ A books record management application or a library management application using 
 # Routes and Endpoints
 
 ### /users
-* POST: create a new user
-* GET: get all the user's info
+* POST: create a new user (done)
+* GET: get all the user's info (done)
 
 ### /users/{id}
-* GET: get a user by his/her id
-* PUT: update a user by their id
-* DELETE: delete a user by id (check if he/she still have an issued book) & (is there any fine to be paid)
+* GET: get a user by his/her id (done)
+* PUT: update a user by their id (done)
+* DELETE: delete a user by id (check if he/she still have an issued book) & (is there any fine to be paid) (pending)
 
 ### /users/subscription-details/{id}
 * GET: get user's subscription details
