@@ -1,4 +1,137 @@
 const express = require("express");
 const router = express.Router();
+const { books } = require("../Books.json");
+
+/* 
+    Route: /getBooks
+    method: GET
+    desc: get all books
+    access: public
+    params: none
+*/
+
+router.get("/getBooks", (req, res) => {
+  res.status(200).json({
+    success: true,
+    data: books,
+  });
+});
+
+/* 
+    Route: /getBook/:id
+    method: GET
+    desc: get a book by their id
+    access: public
+    params: id
+*/
+
+router.get("/getBook/:id", (req, res) => {
+  const { id } = req.params;
+  const book = books.find((book) => book.id === id);
+  if (!book) {
+    return res.status(404).json({
+      success: false,
+      message: "book not found",
+    });
+  }
+  return res.status(200).json({
+    success: true,
+    message: "book found",
+    data: book,
+  });
+});
+
+/* 
+      Route: /newBook
+      method: POST
+      desc: add a new book
+      access: public
+      params: none
+*/
+
+router.post("/newBook", (req, res) => {
+  const { id, name, genre } = req.body;
+  const book = books.find((book) => book.id === id);
+
+  if (book) {
+    return res.status(404).json({
+      success: false,
+      message: "book already exist !",
+    });
+  }
+  books.push({
+    id,
+    name,
+    genre,
+  });
+  return res.status(200).json({
+    success: true,
+    message: "book added successfully",
+    data: books,
+  });
+});
+
+/* 
+      Route: /updateUser/:id
+      method: PUT
+      desc: updating a user by their id
+      access: public
+      params: id
+  */
+
+router.put("/updateBook/:id", (req, res) => {
+  const { id } = req.params;
+  const { data } = req.body;
+
+  const book = books.find((book) => book.id === id);
+  if (!book) {
+    return res.status(404).json({
+      success: false,
+      message: "book not found",
+    });
+  }
+  const updateBookData = books.map((book) => {
+    if (book.id === id) {
+      return {
+        ...book,
+        ...data,
+      };
+    }
+    return book;
+  });
+  return res.status(200).json({
+    success: true,
+    message: "book updated successfully",
+    data: updateBookData,
+  });
+});
+
+/* 
+      Route: /deleteBook/:id
+      method: DELETE
+      desc: deleting a book by their id
+      access: public
+      params: id
+  */
+
+router.delete("/deleteBook/:id", (req, res) => {
+  const { id } = req.params;
+
+  const book = books.find((book) => book.id === id);
+  if (!book) {
+    res.status(404).json({
+      success: false,
+      message: "book doesn't exist",
+    });
+  }
+  // delete logic need to be built
+  const index = books.indexOf(book);
+  books.splice(index, 1);
+  return res.status(200).json({
+    success: true,
+    message: "deleted book",
+    data: books,
+  });
+});
 
 module.exports = router;

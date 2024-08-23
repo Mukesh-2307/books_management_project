@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { users } = require("../Users.json");
 
+const { Router } = require("express");
 /* 
     Route: /getUsers
     method: GET
@@ -10,7 +11,6 @@ const { users } = require("../Users.json");
     params: none
 */
 
-const { Router } = require("express");
 
 router.get("/getUsers", (req, res) => {
     res.status(200).json({
@@ -123,7 +123,7 @@ router.get("/getUsers", (req, res) => {
       params: id
   */
   
-  router.delete("/deleteUsers/:id",(req,res)=>{
+  router.delete("/deleteUser/:id",(req,res)=>{
     const {id} = req.params;
   
     const user = users.find((person)=>person.id === id);
