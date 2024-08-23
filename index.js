@@ -3,7 +3,7 @@ const { users } = require("./Users.json");
 const { books } = require("./Books.json");
 
 const usersRouter = require('./routes/users.js');
-// const booksRouter = require('./routes/books.js');
+const booksRouter = require('./routes/books.js');
 
 const app = express();
 
@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/users",usersRouter);
-// app.use("/books",booksRouter);
+app.use("/books",booksRouter);
 
 // the below code will be executed if a user tries to access an endpoint that doesn't exist
 
