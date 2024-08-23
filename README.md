@@ -21,7 +21,7 @@ A books record management application or a library management application using 
 ### /users/{id}
 * GET: get a user by his/her id (done)
 * PUT: update a user by their id (done)
-* DELETE: delete a user by id (check if he/she still have an issued book) & (is there any fine to be paid) (pending)
+* DELETE: delete a user by id (check if he/she still have an issued book) & (is there any fine to be paid) (done)
 
 ### /users/subscription-details/{id}
 * GET: get user's subscription details
