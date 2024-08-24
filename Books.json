@@ -3,17 +3,20 @@
       {
         "id": "111",
         "name": "the hidden hindu",
-        "genre": "historical"
+        "genre": "historical",
+        "price": "145"
       },
       {
         "id": "112",
         "name": "the atomic habit",
-        "genre": "life"
+        "genre": "life",
+        "price": "299"
       },
       {
         "id": "113",
         "name": "the psychology of money",
-        "genre": "finance"
+        "genre": "finance",
+        "price": "699"
       }
     ]
   }
