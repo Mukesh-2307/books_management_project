@@ -1,46 +1,34 @@
 {
-    "users": [
-      {
-        "id": "1",
-        "name": "mukesh",
-        "roll": "20btcse42",
-        "email": "mukeshdalai.2307@gmail.com",
-        "issuedBooks": "112",
-        "issuedDate": "04/01/2022",
-        "returnDate": "05/01/2022",
-        "subscription-type": "premium",
-        "subscription-date": "23-07-2024"
-      },
-      {
-        "id": "2",
-        "name": "manas",
-        "roll": "20btcse38",
-        "email": "manaskumar.2307@gmail.com",
-        "subscription-type": "standard",
-        "subscription-date": "06-09-2024"
-      },
-      {
-        "id": "3",
-        "name": "ashis",
-        "roll": "20btcse18",
-        "email": "ashisdas.2307@gmail.com",
-        "issuedBooks": "113",
-        "issuedDate": "01/07/2022",
-        "returnDate": "01/10/2022",
-        "subscription-type": "basic",
-        "subscription-date": "29-09-2024"
-      },
-      {
-        "id": "3",
-        "name": "ashis",
-        "roll": "20btcse18",
-        "email": "ashisdas.2307@gmail.com",
-        "issuedBooks": "111",
-        "issuedDate": "01/07/2022",
-        "returnDate": "01/10/2022",
-        "subscription-type": "basic",
-        "subscription-date": "29-09-2024"
-      }
-    ]
-  }
-  
+  "users": [
+    {
+      "id": "1",
+      "name": "mukesh",
+      "roll": "20btcse42",
+      "email": "mukeshdalai.2307@gmail.com",
+      "issuedBooks": "112",
+      "issuedDate": "07/02/2024",
+      "returnDate": "08/02/2024",
+      "subscriptionType": "premium",
+      "subscriptionDate": "07/02/2024"
+    },
+    {
+      "id": "2",
+      "name": "manas",
+      "roll": "20btcse38",
+      "email": "manaskumar.2307@gmail.com",
+      "subscriptionType": "standard",
+      "subscriptionDate": "06/09/2024"
+    },
+    {
+      "id": "3",
+      "name": "ashis",
+      "roll": "20btcse18",
+      "email": "ashisdas.2307@gmail.com",
+      "issuedBooks": "113",
+      "issuedDate": "10/01/2023",
+      "returnDate": "08/23/2024",
+      "subscriptionType": "basic",
+      "subscriptionDate": "10/01/2023"
+    }
+  ]
+}
