@@ -51,7 +51,7 @@ router.get("/getBook/:id", (req, res) => {
 */
 
 router.post("/newBook", (req, res) => {
-  const { id, name, genre } = req.body;
+  const { id, name, genre, price } = req.body;
   const book = books.find((book) => book.id === id);
 
   if (book) {
@@ -64,6 +64,7 @@ router.post("/newBook", (req, res) => {
     id,
     name,
     genre,
+    price,
   });
   return res.status(200).json({
     success: true,
@@ -73,9 +74,9 @@ router.post("/newBook", (req, res) => {
 });
 
 /* 
-      Route: /updateUser/:id
+      Route: /updateBook/:id
       method: PUT
-      desc: updating a user by their id
+      desc: updating a book by their id
       access: public
       params: id
   */
@@ -83,6 +84,13 @@ router.post("/newBook", (req, res) => {
 router.put("/updateBook/:id", (req, res) => {
   const { id } = req.params;
   const { data } = req.body;
+
+  if(!data){
+    return res.status(404).json({
+      success: false,
+      message: "data not available"
+    })
+  }
 
   const book = books.find((book) => book.id === id);
   if (!book) {
@@ -100,7 +108,7 @@ router.put("/updateBook/:id", (req, res) => {
     }
     return book;
   });
-  return res.status(200).json({
+  return res.status(201).json({
     success: true,
     message: "book updated successfully",
     data: updateBookData,
@@ -144,31 +152,31 @@ router.delete("/deleteBook/:id", (req, res) => {
 */
 
 router.get("/issuedBooks", (req, res) => {
-  const usersWithTheIssuedBook = users.filter((person)=>{
-    if(person.issuedBooks){
+  const usersWithTheIssuedBook = users.filter((person) => {
+    if (person.issuedBooks) {
       return person;
     }
   });
   const issuedBooks = [];
-  usersWithTheIssuedBook.forEach((person)=>{
-    const book = books.find((book) => (book.id === person.issuedBooks));
+  usersWithTheIssuedBook.forEach((person) => {
+    const book = books.find((book) => book.id === person.issuedBooks);
     book.issuedBy = person.name;
-    book.issuedDate = person.issuedDate;  
+    book.issuedDate = person.issuedDate;
     book.returnDate = person.returnDate;
 
     issuedBooks.push(book);
   });
-  if(issuedBooks.length === 0){
+  if (issuedBooks.length === 0) {
     return res.status(404).json({
       success: false,
-      message: "no book have been issued yet"
+      message: "no book have been issued yet",
     });
   }
   return res.status(200).json({
     success: true,
     message: "users with the issued books",
-    data: issuedBooks
-  })
+    data: issuedBooks,
+  });
 });
 
 module.exports = router;
